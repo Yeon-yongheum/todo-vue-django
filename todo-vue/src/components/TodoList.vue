@@ -1,12 +1,12 @@
 <template>
   <div class="todo-list">
-      <h2>투두</h2>
+      <li></li>
   </div>
 </template>
 
 <script>
 export default {
-    name: 'TodoList'
+    name: 'TodoList',
 }
 </script>
 
