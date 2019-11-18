@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
+    <h2>Todo</h2>
     <TodoList :todos="todos"/>
   </div>
 </template>
