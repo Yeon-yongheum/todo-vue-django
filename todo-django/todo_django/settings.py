@@ -125,7 +125,7 @@ STATIC_URL = '/static/'
 
 AUTH_USER_MODEL = 'todos.User'
 
-# cors
+# cors --> 헤더에 특정내용 담아서 전달
 CORS_ORIGIN_ALLOW_ALL = True # CORS 모두 추가
 
 CORS_ORIGIN_WHITE_LIST = [
