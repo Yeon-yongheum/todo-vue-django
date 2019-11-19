@@ -132,9 +132,39 @@ getTodos() {
 >
 > https://jwt.io
 
+### 1) django
+
 ```bash
 $ pip install djangorestframework-jwt
 ```
 
+### 2) Vue
 
+1. 로그인 관련 컴포넌트 생성
+
+2. 이벤트를 통해 axios요청
+
+3. token 값 저장
+
+   1. `vue-session`
+
+      ```bash
+      $ npm i vue-session
+      ```
+
+   2. `src/main.js`
+
+      ```js
+      import VueSession from 'vue-session'
+      Vue.use(VueSession)
+      ```
+
+   3. `Vue-session`활용하여 저장 
+
+      ```js
+      this.$session.start()
+      this.$session.set('jwt',token)
+      ```
+
+      
 
