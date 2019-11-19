@@ -1,7 +1,7 @@
 <template>
 <div>
   <h2>로그인</h2>
-  <LoginForm></LoginForm>
+  <LoginForm/>
 </div>
 </template>
 

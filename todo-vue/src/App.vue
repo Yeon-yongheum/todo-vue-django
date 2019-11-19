@@ -6,12 +6,32 @@
         -> routers에 정의된 해당 컴포넌트를 불러온다.
       -->
       <router-link to="/">Home</router-link> |
-      <router-link to="/login">Login</router-link>
+      <router-link v-if="!isAuthenticated" to="/login">Login</router-link> 
+      <a v-else @click.prevent="logout" href="#">Logout</a> 
     </div>
     <router-view/>
   </div>
 </template>
-
+<script>
+import router from './router'
+export default {
+  name: 'App',
+  data() {
+    return{
+      isAuthenticated: this.$session.has('jwt')
+    }
+  },
+  methods: {
+    logout() {
+      this.$session.destroy()
+      router.push('/login')
+    }
+  },
+  updated() {
+    this.isAuthenticated = this.$session.has('jwt')
+  }
+}
+</script>
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

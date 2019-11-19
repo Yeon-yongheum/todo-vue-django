@@ -72,7 +72,7 @@ $ vue add router
 > Use history mode for router? (Requires proper server setup for index fallback in production) y
 ```
 
-### 4. getTodos
+## 4. getTodos
 
 1. getTodos 메소드 정의
 
@@ -208,3 +208,12 @@ username: "yyh2" }*/
 ```
 
 ## 7. User 별 Todo
+
+### 1. Django
+
+### 2. Vue
+
+## 8. 비로그인시 로그인 페이지로 이동
+
+
+

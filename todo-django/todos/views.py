@@ -24,9 +24,9 @@ def todo_index_create(request):
             serializers.save()
             return Response(serializers.data)
 
-
+# GET /users/{id}
 @api_view(['GET'])
-def user_detail(request):
+def user_detail(request,id):
     User = get_user_model()
     user = get_object_or_404(User, pk=id)
     serializers = UserSerializers(user)

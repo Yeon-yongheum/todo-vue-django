@@ -9,7 +9,7 @@
         <input v-model="credentials.username" type="text" id="username"> 
         <br>  
         <label for="password">password: </label>
-        <input v-model="credentials.password" type="text" id="password">
+        <input v-model="credentials.password" type="password" id="password">
         <br>
         <button type="submit">로그인</button>
     </form>
