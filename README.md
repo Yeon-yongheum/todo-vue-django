@@ -118,3 +118,23 @@ getTodos() {
 
 ### 5. TodoForm component를 통해 투두 등록하기
 
+## 6. 로그인 기능
+
+> JWT(JSON Web Token) : 토큰 기반 로그인 인증
+>
+> 1. 클라이언트(Vue) 로그인 정보(username, password)를 서버(Django)로 전송
+> 2. 서버는 해당 정보를 바탕으로  Token을 발금 및 암호화
+> 3. 클라이언트는 Token을 받아서 매 요청때마다 헤더에 비해 Toke정보를 추가해서 보냄
+> 4. 서버에서는 매번 Token이 유효한지 확인 및 데이터 전송
+> 5. 클라이언트는 전송괸 값을 디코딩 하여 사용자 정보 활용
+>
+> JWT는 기본적으로 헤더 ,payliad, Verify signature로 구성된다.
+>
+> https://jwt.io
+
+```bash
+$ pip install djangorestframework-jwt
+```
+
+
+
