@@ -72,7 +72,7 @@ $ vue add router
 > Use history mode for router? (Requires proper server setup for index fallback in production) y
 ```
 
-### 4. get
+### 4. getTodos
 
 1. getTodos 메소드 정의
 

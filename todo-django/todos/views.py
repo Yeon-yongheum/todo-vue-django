@@ -9,14 +9,16 @@ from .serializers import TodoSerializers
 
 # GET/todos/ : 전체 todos 목록 가져오기
 # POST/todos/ : todos 등록 (저장하기)
-@api_view(['GET'])
+@api_view(['GET','POST'])
 def todo_index_create(request):
     if request.method == 'GET':
         todos = Todo.objects.all()
         serializers = TodoSerializers(todos, many=True)
         return Response(serializers.data)
     else:
-        serializers = TodoSerializers(data=request.POST)
+        # request.POST : FormData 로 POST 전송이 되었을 때
+        # request.data : FormData로 POST 전송 및 data로 모두 전송
+        serializers = TodoSerializers(data=request.data)
         if serializers.is_valid(raise_exception=True):
             serializers.save()
             return Response(serializers.data)
