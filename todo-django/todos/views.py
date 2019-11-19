@@ -45,5 +45,5 @@ def todo_update_delete(request, id):
     else:
         todo.delete()
         # HTTP 상태코드 204
-        return Response({'message': '삭제되었습니다.'})    
+        return Response({'message': '삭제되었습니다.'})   
     
