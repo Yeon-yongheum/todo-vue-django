@@ -22,3 +22,4 @@ urlpatterns = [
     path('api/v1/', include('todos.urls')),
     path('api-token-auth/',obtain_jwt_token)
 ]
+                                                    

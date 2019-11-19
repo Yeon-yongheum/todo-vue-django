@@ -116,7 +116,7 @@ getTodos() {
 
 5. vue에서 다시 요청 보내보기
 
-### 5. TodoForm component를 통해 투두 등록하기
+## 5. TodoForm component를 통해 투두 등록하기
 
 ## 6. 로그인 기능
 
@@ -168,3 +168,43 @@ $ pip install djangorestframework-jwt
 
       
 
+### 3) 활용
+
+1. axios 요청시마다 아내의 `options`을 포함하여 전송
+
+   ```js
+   this.$session.start()
+         const token = this.$session.get('jwt')
+         const options = {
+           headers:{
+             Authorization: `JWT ${token}` // JWT 다음에 공백있음
+           }
+         }
+   ```
+
+   
+
+### 4) 사용자 정보 활용
+
+> 사용자 정보를 활용하고 싶다면 , tokendmf elzheldgkdu ghkfdydgksek.
+
+1. `패키지 설치`
+
+```bash
+$ npm i jwt-decode
+```
+
+2. 활용
+
+```js
+import jwtDecode from 'jwt-decode'
+this.$session.start()
+const token = this.$session.get('jwt')
+console.log(jwtDecode(token))
+/*{ email: ""
+exp: 1574162065
+user_id: 2
+username: "yyh2" }*/
+```
+
+## 7. User 별 Todo
