@@ -44,25 +44,30 @@ export default {
                 console.log(error)
             })
         },
-        // updateTodo(todo){
-        //     this.$session.start()
-        //     const token = this.$session.get('jwt')
-        //     const options = {
-        //         headers:{
-        //         Authorization: `JWT ${token}` // JWT 다음에 공백있음
-        //         }
-        //     }
-        //     axios.put(`http://127.0.0.1:8000/api/v1/todos/${todo.id}/`, options)
-        //     .then(response =>{
-        //         console.log(response)
-        //         if (todo.is_completed){
-        //             todo.is_completed = false
-        //         } else{
-        //             todo.is_completed = true
-        //         }
-        //     })
+
+        updateTodo(todo){
+            this.$session.start()
+            const token = this.$session.get('jwt')
+            const options = {
+                headers:{
+                Authorization: `JWT ${token}` // JWT 다음에 공백있음
+                }
+            }
+            // const data = {
+            //     'id' : todo.id,
+            //     'used_id' : todo.used_id,
+            //     'title' : todo.title,
+            //     'is_completed' : todo.is_completed
+            // }
+            axios.put(`http://127.0.0.1:8000/api/v1/todos/${todo.id}/`, todo, options)
+            .then(response =>{
+                console.log(response)
+            })
+            .catch(error => {
+                console.log(error)
+            })
            
-        // }
+        }
     }
 }
 </script>
